@@ -51,39 +51,39 @@ CREATE TABLE IF NOT EXISTS academic_logs (
 -- PHẦN 2
 -- CÂU 1
 INSERT INTO courses (course_id, course_name, course_code, department, creation_date) VALUES
-(1, 'Lập trình Java', 'JAVA01', 'CNTT', '2023-12-03'),
-(2, 'Cấu trúc dữ liệu', 'DSA02', 'Khoa học máy tính', '1996-11-25'),
-(3, 'Cơ sở dữ liệu', 'SQL03', 'CNTT', '2001-07-08'),
-(4, 'Mạng máy tính', 'NET04', 'Truyền thông', '1998-01-19'),
-(5, 'Trí tuệ nhân tạo', 'AI05', 'Khoa học máy tính', '2000-09-30');
+('1', 'Lập trình Java', 'JAVA01', 'CNTT', '2023-12-03'),
+('2', 'Cấu trúc dữ liệu', 'DSA02', 'Khoa học máy tính', '1996-11-25'),
+('3', 'Cơ sở dữ liệu', 'SQL03', 'CNTT', '2001-07-08'),
+('4', 'Mạng máy tính', 'NET04', 'Truyền thông', '1998-01-19'),
+('5', 'Trí tuệ nhân tạo', 'AI05', 'Khoa học máy tính', '2000-09-30');
 
 INSERT INTO students (student_id, full_name, major, phone_number, gpa) VALUES
-(1, 'Nguyễn Văn Hải', 'Hệ thống TT', '0931112223', 3.8),
-(2, 'Trần Thu Hà', 'Kỹ thuật PM', '0932223334', 4.0),
-(3, 'Lê Quốc Tuấn', 'An toàn TT', '0933334445', 3.6),
-(4, 'Phạm Minh Châu', 'Dữ liệu lớn', '0934445556', 3.9),
-(5, 'Hoàng Gia Bảo', 'Kỹ thuật PM', '0935556667', 3.7);
+('1', 'Nguyễn Văn Hải', 'Hệ thống TT', '0931112223', '3.8'),
+('2', 'Trần Thu Hà', 'Kỹ thuật PM', '0932223334', '4.0'),
+('3', 'Lê Quốc Tuấn', 'An toàn TT', '0933334445', '3.6'),
+('4', 'Phạm Minh Châu', 'Dữ liệu lớn', '0934445556', '3.9'),
+('5', 'Hoàng Gia Bảo', 'Kỹ thuật PM', '0935556667', '3.7');
 
 INSERT INTO enrollments (enrollment_id, course_id, student_id, enroll_time, credits, status) VALUES
-(7001, 1, 1, '2024-05-20 08:00:00', 3, 'Pending'),
-(7002, 2, 2, '2024-05-20 09:30:00', 4, 'Completed'),
-(7003, 3, 3, '2024-05-20 10:15:00', 3, 'Pending'),
-(7004, 4, 5, '2024-05-21 07:00:00', 3, 'Completed'),
-(7005, 5, 4, '2024-05-21 08:45:00', 4, 'Dropped');
+('7001', '1', '1', '2024-05-20 08:00:00', '3', 'Pending'),
+('7002', '2', '2', '2024-05-20 09:30:00', '4', 'Completed'),
+('7003', '3',' 3', '2024-05-20 10:15:00', '3', 'Pending'),
+('7004', '4', '5', '2024-05-21 07:00:00', '3', 'Completed'),
+('7005', '5', '4', '2024-05-21 08:45:00', '4', 'Dropped');
 
 INSERT INTO enrollment_details (detail_id, enrollment_id, attendance_check, detail_date) VALUES
-(8001, 7002, 'Đủ điều kiện thi', '2024-05-20 10:00:00'),
-(8002, 7004, 'Vắng 1 buổi', '2024-05-21 08:00:00'),
-(8003, 7001, 'Đang học', '2024-05-20 09:00:00'),
-(8004, 7003, 'Nghỉ phép', '2024-05-20 11:00:00'),
-(8005, 7005, 'Không đi học', '2024-05-21 09:00:00');
+('8001', '7002', 'Đủ điều kiện thi', '2024-05-20 10:00:00'),
+('8002', '7004', 'Vắng 1 buổi', '2024-05-21 08:00:00'),
+('8003', '7001', 'Đang học', '2024-05-20 09:00:00'),
+('8004', '7003', 'Nghỉ phép', '2024-05-20 11:00:00'),
+('8005', '7005', 'Không đi học', '2024-05-21 09:00:00');
 
 INSERT INTO academic_logs (log_id, detail_id, student_id, log_time, note) VALUES
-(1, 8003, 1, '2024-05-20 09:05:00', 'Bắt đầu lớp học'),
-(2, 8001, 2, '2024-05-20 10:05:00', 'Hoàn tất môn học'),
-(3, 8004, 3, '2024-05-20 11:10:00', 'Đang sắp xếp lịch bù'),
-(4, 8002, 5, '2024-05-21 08:10:00', 'Chờ phê duyệt điểm'),
-(5, 8005, 4, '2024-05-21 09:05:00', 'Hủy do vắng quá số buổi');
+('1',' 8003',' 1', '2024-05-20 09:05:00', 'Bắt đầu lớp học'),
+('2', '8001', '2', '2024-05-20 10:05:00', 'Hoàn tất môn học'),
+('3', '8004', '3', '2024-05-20 11:10:00', 'Đang sắp xếp lịch bù'),
+('4', '8002', '5', '2024-05-21 08:10:00', 'Chờ phê duyệt điểm'),
+('5', '8005', '4', '2024-05-21 09:05:00', 'Hủy do vắng quá số buổi');
 -- CÂU 2
 UPDATE enrollments e
 JOIN courses c ON e.course_id = c.course_id
