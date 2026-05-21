@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS academic_management_006;
-USE academic_management_006;
+CREATE DATABASE IF NOT EXISTS Management_006;
+USE ManagemenT;
 
 -- PHẦN 1
 CREATE TABLE IF NOT EXISTS courses (
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS enrollments (
     student_id INT,
     enroll_time DATETIME NOT NULL,
     credits INT,
-    status ENUM('Pending', 'Completed', 'Dropped') DEFAULT 'Pending',
+    status VARCHAR (255) ,
     FOREIGN KEY (course_id) REFERENCES courses(course_id),
     FOREIGN KEY (student_id) REFERENCES students(student_id),
     CONSTRAINT check_credits CHECK (credits > 0)
