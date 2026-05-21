@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS Management_006;
-USE ManagemenT;
+CREATE DATABASE IF NOT EXISTS Management;
+USE Management;
 
 -- PHẦN 1
 CREATE TABLE IF NOT EXISTS courses (
